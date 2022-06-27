@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:popularpeople/features/people_list/models/person_basic_info.dart';
-import 'package:popularpeople/features/people_list/views/person_info_card.dart';
+import 'package:popularpeople/features/people_list/views/person_basic_info_card.dart';
 
 class PeopleListPage extends StatelessWidget {
   const PeopleListPage({Key? key}) : super(key: key);
@@ -12,16 +12,16 @@ class PeopleListPage extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              PersonInfoCard(
+              PersonBasicInfoCard(
                 personBasicInfo: personX,
               ),
-              PersonInfoCard(
+              PersonBasicInfoCard(
                 personBasicInfo: personX,
               ),
-              PersonInfoCard(
+              PersonBasicInfoCard(
                 personBasicInfo: personX,
               ),
-              PersonInfoCard(
+              PersonBasicInfoCard(
                 personBasicInfo: personX,
               ),
 

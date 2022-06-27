@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:popularpeople/features/person_info/models/person_info.dart';
+import 'package:popularpeople/features/person_info/views/info_card.dart';
 import 'package:popularpeople/features/person_info/views/profile_pictures_grid.dart';
 import 'package:sizer/sizer.dart';
-
 import 'movies_grid.dart';
 
 class PersonInfoPage extends StatelessWidget {
@@ -19,16 +19,20 @@ class PersonInfoPage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(5.w),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ProfilePicturesGrid(
-                profilePicturesLinks: profilePictureLinks,
-              ),
-              MoviesGrid(
-                moviesList: moviesList,
-              ),
-            ],
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                ProfilePicturesGrid(
+                  profilePicturesLinks: profilePictureLinks,
+                ),
+                PersonInfoCard(personInfo: personInfo),
+                MoviesGrid(
+                  moviesList: moviesList,
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -60,3 +64,13 @@ List<Map<String, String>> moviesList = [
     'poster': 'https://www.themoviedb.org/t/p/w1280/vh4K737r0ZjrioIjHcs7ktV8RFO.jpg',
   },
 ];
+
+PersonInfo personInfo = PersonInfo(
+  personId: '86654',
+  personName: "Austin Butler",
+  personBirthday: "1991-08-17",
+  personBirthPlace: "Anaheim, California, USA",
+  personKnownFor: "Acting",
+  personBiography:
+      "Austin Robert Butler (born August 17, 1991) is an American actor. He is known for his roles as James \"Wilke\" Wilkerson in the television series Switched at Birth, Jordan Gallagher on Ruby & the Rockits, Sebastian Kydd in The Carrie Diaries, Tex Watson in Once Upon a Time in Hollywood, and Wil Ohmsford in The Shannara Chronicles. In 2022, he will appear as Elvis Presley in the film Elvis.",
+);

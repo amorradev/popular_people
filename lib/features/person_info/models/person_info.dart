@@ -8,7 +8,6 @@ class PersonInfo {
     required this.personBirthPlace,
     required this.personKnownFor,
     required this.personBiography,
-    required this.personPicture,
   });
 
 
@@ -18,7 +17,6 @@ class PersonInfo {
   String? personBirthPlace;
   String? personKnownFor;
   String? personBiography;
-  String? personPicture;
 
 
 
@@ -30,7 +28,6 @@ class PersonInfo {
     personBirthPlace = personData['personBirthPlace'];
     personKnownFor = personData['personKnownFor'];
     personBiography = personData['personBiography'];
-    personPicture = personData['personPicture'];
   }
 
   Map<String,dynamic> toMap(){
@@ -41,7 +38,6 @@ class PersonInfo {
       'personBirthPlace':personBirthPlace,
       'personKnownFor':personKnownFor,
       'personBiography':personBiography,
-      'personPicture':personPicture,
     };
   }
 

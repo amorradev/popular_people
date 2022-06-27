@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:popularpeople/features/people_list/models/person_basic_info.dart';
 import 'package:sizer/sizer.dart';
 
-class PersonInfoCard extends StatelessWidget {
-  const PersonInfoCard({
+class PersonBasicInfoCard extends StatelessWidget {
+  const PersonBasicInfoCard({
     Key? key,
     required this.personBasicInfo,
   }) : super(key: key);
