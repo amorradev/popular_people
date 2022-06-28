@@ -41,6 +41,8 @@ class PersonBasicInfoCard extends StatelessWidget {
                     Text(
                       personBasicInfo.personName!,
                       style: Theme.of(context).textTheme.titleLarge,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     Text(
                       personBasicInfo.knownFor!,

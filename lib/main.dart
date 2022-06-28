@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return Sizer(
         builder: (context, orientation, deviceType) {
           return const MaterialApp(
-            home: PersonInfoPage(),
+            home: PeopleListPage(),
           );
         }
     );
