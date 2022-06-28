@@ -42,8 +42,3 @@ class PeopleListPage extends StatelessWidget {
   }
 }
 
-PersonBasicInfo personX = PersonBasicInfo(
-  personName: 'Austin Butler',
-  knownFor: "Once Upon a Time… in Hollywood, Arrow, The Dead Don't Die, Once Upon a Time… in Hollywood, Arrow, The Dead Don't Die",
-  pictureUrl: 'https://www.themoviedb.org/t/p/w470_and_h470_face/2gHiYPXOq7RJLs4vTz5fUmSg8cd.jpg',
-);

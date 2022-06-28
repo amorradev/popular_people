@@ -6,7 +6,7 @@ class ProfilePicturesGrid extends StatelessWidget {
     Key? key,
     required this.profilePicturesLinks,
   }) : super(key: key);
-  final List<String?> profilePicturesLinks;
+  final List profilePicturesLinks;
   @override
   Widget build(BuildContext context) {
     return Padding(

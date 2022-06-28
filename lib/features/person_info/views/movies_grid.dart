@@ -6,7 +6,7 @@ class MoviesGrid extends StatelessWidget {
     Key? key,
     required this.moviesList,
   }) : super(key: key);
-  final List<Map<String, String>> moviesList;
+  final List moviesList;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

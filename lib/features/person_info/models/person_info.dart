@@ -8,6 +8,8 @@ class PersonInfo {
     required this.personBirthPlace,
     required this.personKnownFor,
     required this.personBiography,
+    required this.personCredits,
+    required this.personProfilePictures,
   });
 
 
@@ -17,17 +19,32 @@ class PersonInfo {
   String? personBirthPlace;
   String? personKnownFor;
   String? personBiography;
+  List? personCredits;
+  List? personProfilePictures;
 
 
 
 
-  PersonInfo.fromMap(Map<String,String> personData){
+  PersonInfo.fromMap(Map<String,dynamic> personData){
     personId = personData['personId'];
     personName = personData['personName'];
     personBirthday = personData['personBirthday'];
     personBirthPlace = personData['personBirthPlace'];
     personKnownFor = personData['personKnownFor'];
     personBiography = personData['personBiography'];
+    personCredits = personData['personCredits'];
+    personProfilePictures = personData['personProfilePictures'];
+  }
+
+  PersonInfo.initial(){
+    personId = null;
+    personName = null;
+    personBirthday = null;
+    personBirthPlace = null;
+    personKnownFor = null;
+    personBiography = null;
+    personCredits = null;
+    personProfilePictures = null;
   }
 
   Map<String,dynamic> toMap(){
@@ -38,6 +55,8 @@ class PersonInfo {
       'personBirthPlace':personBirthPlace,
       'personKnownFor':personKnownFor,
       'personBiography':personBiography,
+      'personCredits':personCredits,
+      'personProfilePictures':personProfilePictures,
     };
   }
 

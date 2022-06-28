@@ -20,16 +20,17 @@ class PeopleListFetcher {
       );
       final returnedData = response.data as Map;
       final peopleList = returnedData['results'] as List;
-      final personalBasicInfoList = List.generate(
-          peopleList.length,
-          (index) => PersonBasicInfo(
-                personName: peopleList[index]["name"],
-                knownFor: getBasicKnownForString(peopleList[index]["known_for"]),
-                pictureUrl: getBasicProfilePictureUrl(peopleList[index]["profile_path"]),
-              ));
+      final personalBasicInfoList = List.generate(peopleList.length, (index) {
+
+        return PersonBasicInfo(
+          personId: '${peopleList[index]["id"]}',
+          personName: peopleList[index]["name"],
+          knownFor: getBasicKnownForString(peopleList[index]["known_for"]),
+          pictureUrl: getBasicProfilePictureUrl(peopleList[index]["profile_path"]),
+        );
+      });
       return personalBasicInfoList;
     } catch (e) {
-
       return [];
     }
   }
