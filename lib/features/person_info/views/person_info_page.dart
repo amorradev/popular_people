@@ -9,10 +9,7 @@ import 'movies_grid.dart';
 class PersonInfoPage extends StatelessWidget {
   const PersonInfoPage({
     Key? key,
-    //required this.personId,
   }) : super(key: key);
-
-  //final String personId;
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:popularpeople/features/person_info/views/profile_picture_downloader.dart';
 import 'package:sizer/sizer.dart';
+import 'package:get/get.dart';
 
 class ProfilePicturesGrid extends StatelessWidget {
   const ProfilePicturesGrid({
@@ -21,8 +23,15 @@ class ProfilePicturesGrid extends StatelessWidget {
               child: SizedBox(
                 width: 30.w,
                 height: 45.w,
-                child: Image.network(
-                  profilePicturesLinks[index]!,
+                child: InkWell(
+                  onTap: () {
+                    Get.to(() => ProfilePictureDownloader(
+                          profilePictureUrl: profilePicturesLinks[index]!,
+                        ));
+                  },
+                  child: Image.network(
+                    profilePicturesLinks[index]!,
+                  ),
                 ),
               ),
             ),
